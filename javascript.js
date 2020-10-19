@@ -4,7 +4,7 @@ var bgImages = ["url(/images/backgrounds/0.png", "url(/images/backgrounds/1.png"
 
 class PageHeader extends HTMLElement {
   connectedCallback() {
-    this.innerHTML = '<div class="logo"><img src="/images/AmansProjects.png" width="69" height="63"/><br></div><div class="navbar"><a class="homebtn" href="/index.html"> Home </a></div><br><br><br>';
+    this.innerHTML = '<div class="logo"><img src="/images/AmansProjects.png" width="69" height="63"/><br></div><div class="navbar"><a height="63" class="homebtn" href="/index.html"> Home </a></div><br><br><br>';
   }
 }
 
