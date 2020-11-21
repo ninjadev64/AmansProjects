@@ -17,5 +17,14 @@ customElements.define('page-header', PageHeader);
 customElements.define('page-footer', PageFooter);
 
 function setup() {
-    document.getElementsByTagName("head")[0].innerHTML = '<meta name="description" content="Aman\'s Projects is my website to share with family and friends! My favourite colour is blue, my favourite food is Chicken & Avocado Tacos, and my favourite number is 64."><link rel="icon" href="/images/favicon.ico" type="image/x-icon"><meta name="viewport" content="width=device-width, initial-scale=1"><script src="https://www.googleoptimize.com/optimize.js?id=OPT-TNV37V3"></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-144569588-1"></script><script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", "UA-144569588-1");</script><script async src="https://cse.google.com/cse.js?cx=c9e60bf9b9fec089e"></script><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/navbar.css"><link rel="stylesheet" href="/css/colours.css"><link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet"><title> Aman\'s Projects </title>';
+  var head = document.head;
+  
+  // Insert site metadata
+  head.insertAdjacentHTML("beforeend", '<title> Aman\'s Projects </title><meta name="description" content="Aman\'s Projects is my website to share with family and friends! My favourite colour is blue, my favourite food is Chicken & Avocado Tacos, and my favourite number is 64."><link rel="icon" href="/images/favicon.ico" type="image/x-icon"><meta name="viewport" content="width=device-width, initial-scale=1">');
+  
+  // Load (and run) external scripts
+  head.insertAdjacentHTML("beforeend", '<script src="https://www.googleoptimize.com/optimize.js?id=OPT-TNV37V3"></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-144569588-1"></script><script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", "UA-144569588-1");</script><script async src="https://cse.google.com/cse.js?cx=c9e60bf9b9fec089e"></script>');
+  
+  // Import CSS and other style files
+  head.insertAdjacentHTML("beforeend", '<link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/navbar.css"><link rel="stylesheet" href="/css/colours.css"><link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">');
 }
